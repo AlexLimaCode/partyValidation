@@ -28,7 +28,7 @@ function App() {
   useEffect(() => {
     const path = window.location.pathname;
     // Extraer el ID después de /verify_invitation/
-    const parts = path.split("/verify_invitation/");
+    const parts = path.split("/update_registry/");
     if (parts.length > 1) {
       setInvitationId(parts[1]); // Decodificar URL
       axios
