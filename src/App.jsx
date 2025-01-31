@@ -35,6 +35,13 @@ function App() {
         .get("https://party.cloudzeetech.org/api/guests/" + parts[1])
         .then((res) => setGuestDetails(res.data))
         .catch((err) => console.log(err));
+    } else {
+      const otherParts = path.split("/welcome/");
+      setInvitationId(otherParts[1]); // Decodificar URL
+      axios
+        .get("https://party.cloudzeetech.org/api/guests/" + otherParts[1])
+        .then((res) => setGuestDetails(res.data))
+        .catch((err) => console.log(err));
     }
   }, []);
 
