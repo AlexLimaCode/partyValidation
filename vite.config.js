@@ -7,4 +7,8 @@ export default defineConfig({
   server: {
     port: 7987,
   },
+  preview: {
+    port: 7987,
+    allowedHosts: ["party.cloudzeetech.org"],
+  },
 });
